@@ -1,0 +1,33 @@
+/**write a program for the input which results by summing two prime numbers **/
+/**sample input->100
+ * sample output->
+ * 100 is the sum of 3 and 97
+ * 100 is the sum of 11 and 89
+ * 100 is the sum of 17 and 83
+ * 100 is the sum of 29 and 71
+ * 100 is the sum of 41 and 59
+ * 100 is the sum of 47 and 53
+ * */
+ 
+#include<stdio.h>
+
+int checkprime(int a){
+for(int i=2;i<a;i++){
+if(a%i==0) return 1;
+}
+return 0;
+}
+
+int main(){
+int a;
+scanf("%d",&a);
+for(int i=2;i<=a/2;i++){
+if(checkprime(i)) continue;
+for(int j=a-i;j>=2;j--){
+if(checkprime(j)) continue;
+else if(a==i+j) {
+printf("\n%d is the sum of %d and %d\n",a,i,j);
+}
+}
+}
+}
