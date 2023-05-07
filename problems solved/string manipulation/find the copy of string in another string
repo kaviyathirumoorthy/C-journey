@@ -1,0 +1,53 @@
+/* getting a two strings str and str1 from the user and check the presence of str1 in str and printf "PRESENT" and "NOT PRESENT"*/
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char str[1000];
+    scanf("%s\n",str);                          
+    char str1[1000];
+    scanf("%s",str1);
+    long int len=strlen(str);
+    long int len1=strlen(str1);
+    int j,count;
+    for(int i=0;i<len;i++){
+        count=0; j=0;
+        while(str[i]==str1[j]){
+            i++;
+            j++;
+            count++;
+            if(str[i]=='\0'|| str1[j]=='\0') break;
+        }
+        if(count==len1) {printf("PRESENT"); return 0;}
+    }
+    printf("NOT PRESENT");
+}
+
+
+/* getting a two strings str and str1 from the user and count the presence of str1 in str and print the count*/
+
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char str[1000000];
+    scanf("%s\n",str);
+    char str1[1000000];
+    scanf("%s",str1);
+    long int len=strlen(str);
+    long int len1=strlen(str1);
+    int j,count,count1=0;
+    for(int i=0;i<len;i++){
+        count=0; j=0;
+        while(str[i]==str1[j]){
+            i++;
+            j++;
+            count++;
+            if(str[i]=='\0'|| str1[j]=='\0') break;
+        }
+        if(count==len1) {count1++;}
+    }
+    printf("THE NUMBER OF STRING 2 PRESENT IN STRING 1 -> %d",count1);
+}
