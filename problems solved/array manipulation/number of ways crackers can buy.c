@@ -7,8 +7,8 @@ int main()
     int n;
     scanf("%d",&n);
     int val=0,count=0,d=2;
-    for(int i=0;i<n;i++){
-        if(i<=4) val=n;
+    for(int i=0;i<=n;i++){
+        if(i<=4) val=i;
         else{
             count++;
             val+=d;
