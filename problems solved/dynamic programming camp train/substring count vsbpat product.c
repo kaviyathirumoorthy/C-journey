@@ -19,7 +19,7 @@ for(int j=i;j<strlen(str);j++){
 int arr[j+1];
 int val=0;
 for(int k=i;k<=j;k++){
-arr[val++]=str[k]+48;
+arr[val++]=str[k]-48;
 }
 res+=substringcountab(a,b,arr,val);
 }
