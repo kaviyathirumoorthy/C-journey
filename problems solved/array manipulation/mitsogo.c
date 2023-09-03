@@ -144,3 +144,47 @@ int main()
     return 0;
 }
 */
+/*Problem statement
+
+A Factorial of a non-negative integer 'n', denoted by 'n!', is the product of all positive integers less than or equal to 'n'. 
+
+You are required to implement the following function
+
+int sumfactorialdigits(int n);
+
+The function accepts a positive integer 'n' as its argument. You are required to calculate the sum of the factorial of all the digits of a number 'n', and return the same.
+
+Note:
+
+0!=1
+n>=0
+Input format :
+Input integer is the value of n.
+
+Output format :
+Output integer is the sum of the factorial of digits in the given number.
+
+Sample test cases :
+Input 1 :
+124
+Output 1 :
+27
+Input 2 :
+267
+Output 2 :
+5762*/
+
+/*#include<stdio.h>
+int fact(int a){
+    if(a==0) return 1;
+    return a*fact(a-1);
+}
+int main(){
+    int a,sum=0;
+    scanf("%d",&a);
+   while(a!=0){
+       sum+=fact(a%10);
+       a/=10;
+   }
+   printf("%d",sum);
+}*/
