@@ -188,3 +188,55 @@ int main(){
    }
    printf("%d",sum);
 }*/
+
+/*A carry is a digit that is transferred to left if sum of digits exceeds 9 while adding two numbers from right. You are required to implement the following function:
+
+
+
+int Numberofcarries(int num1,int num2);
+
+
+
+The function accepts two numbers 'num1' and 'num2' as its arguments.You are required to calculate and return the total number of carries generated while adding digits of two numbers 'num1' and 'num2'.
+
+
+
+Assumption: num1,num2>=0 
+
+Input format :
+The two input integers are the values of num1 & num2 respectively.
+
+Output format :
+Output integer is the number of carry operations.
+
+Sample test cases :
+Input 1 :
+451
+349
+Output 1 :
+2
+Input 2 :
+555
+555
+Output 2 :
+3 */
+/*
+#include<stdio.h>
+int main(){
+    int num1,num2;
+    scanf("%d %d",&num1,&num2);
+    if(num1<num2){
+        num1=num1+num2-(num2=num1);
+    }
+    int carry=0,carrycount=0;
+    while(num1!=0){
+        int sum=(num1%10)+(num2%10)+carry;
+        if(sum>9){
+            carry=1;
+            carrycount+=1;
+        }
+        else carry=0;
+        num1/=10,num2/=10;
+    }
+    printf("%d",carrycount);
+}*/
